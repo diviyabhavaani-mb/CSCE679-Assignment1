@@ -1,8 +1,8 @@
 # CSCE 679 Data Visualization — Assignment 1
 ## Hong Kong Monthly Temperature: Year/Month Matrix View
 
-**Author:** Diviya Bhavaani M B
-**UIN:** 137008855
+**Author:** Diviya Bhavaani M B |
+**UIN:** 137008855 |
 **Course:** CSCE 679 – Data Visualization, Texas A&M University
 
 🔗 **Live demo:** https://diviyabhavaani-mb.github.io/CSCE679-Assignment1/
