@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hong Kong Temperature Matrix</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- D3.js v7 (global `d3` object used by all modules) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+  <header>
+    <h1>Hong Kong Monthly Temperature</h1>
+    <p class="subtitle">CSCE 679 Data Visualization &mdash; Assignment 1</p>
+  </header>
+
+  <!-- Level 1: year/month heatmap over all years -->
+  <section class="chart-section">
+    <h2>Level 1: Year/Month Heatmap</h2>
+    <div id="level1-chart" class="chart-container"></div>
+  </section>
+
+  <!-- Level 2: last 10 years with daily mini line charts -->
+  <section class="chart-section">
+    <h2>Level 2: Year/Month Heatmap with Daily Temperature Lines</h2>
+    <p class="line-key">
+      <span class="key-swatch key-max"></span> Daily maximum
+      <span class="key-swatch key-min"></span> Daily minimum
+    </p>
+    <div id="level2-chart" class="chart-container"></div>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   style.css — page layout and chart styling
+   Colors that encode DATA live in js/config.js; this file only holds
+   presentation styles (fonts, spacing, axis look, tooltip box).
+   ========================================================================== */
+
+:root {
+  --text-color: #222;
+  --muted-text-color: #666;
+  --tooltip-background: #fff;
+  --tooltip-border: #ddd;
+  --daily-max-color: #31a354; /* keep in sync with MINI_LINE_CHART_SETTINGS */
+  --daily-min-color: #a6bddb;
+}
+
+body {
+  margin: 0;
+  padding: 16px 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background: #fff;
+}
+
+h1 { margin: 0 0 4px; font-size: 24px; }
+h2 { margin: 28px 0 6px; font-size: 18px; }
+.subtitle { margin: 0; color: var(--muted-text-color); }
+
+/* Let wide charts scroll horizontally on small screens. */
+.chart-container { overflow-x: auto; }
+
+.mode-caption { margin: 4px 0 8px; font-size: 14px; }
+
+/* ----- Matrix cells ----- */
+.month-cell { cursor: pointer; }
+.month-cell:hover .cell-background { stroke: #333; stroke-width: 1.5; }
+
+/* ----- Axes ----- */
+.axis text { font-size: 11px; }
+.axis-month text { font-size: 12px; }
+
+/* ----- Legend ----- */
+.legend-label { font-family: "Times New Roman", serif; }
+
+/* ----- Key for the Level 2 line colors ----- */
+.line-key { font-size: 13px; margin: 0 0 4px; }
+.key-swatch {
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  margin: 0 4px 3px 12px;
+  vertical-align: middle;
+}
+.key-max { background: var(--daily-max-color); }
+.key-min { background: var(--daily-min-color); }
+
+/* ----- Tooltip ----- */
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  padding: 8px 12px;
+  font-size: 12px;
+  background: var(--tooltip-background);
+  border: 1px solid var(--tooltip-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  transition: opacity 0.1s;
+}
+
+.error-message { color: #b00020; font-weight: bold; }
